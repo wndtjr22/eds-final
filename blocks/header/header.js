@@ -127,9 +127,23 @@ export default async function decorate(block) {
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
+  const navTools = nav.querySelector('.nav-tools');
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
+  }
+
+  const navToolsSection = navTools.querySelector('img');
+  if (navToolsSection) {
+    console.log("NAV TOOLS", navToolsSection);
+    const icon = navTools.querySelector('.default-content-wrapper p');
+    const searchInput = document.createElement('input');
+    searchInput.className = 'cmp-search__input';
+    searchInput.placeholder = "Search";
+    icon.appendChild(searchInput)
+    // navTools.
+  } else {
+    console.log("NAV TOOLS NOT FOUND")
   }
 
   const navSections = nav.querySelector('.nav-sections');
@@ -163,4 +177,13 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+
+  const externalCssUrl = 'https://kit.fontawesome.com/6b9d4abe2e.js';
+
+  // 동적으로 <link> 태그 생성 및 삽입
+  const linkElement = document.createElement('script');
+  linkElement.crossOrigin = 'anonymous';
+  linkElement.src = externalCssUrl;
+  document.head.appendChild(linkElement);
 }

@@ -16,5 +16,23 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  const snsLogos = footer.querySelectorAll(".footer-sns-logo ul li");
+
+  snsLogos.forEach((li) => {
+    console.log(li)
+    if (li.innerText === "Facebook"){
+      li.className = "fa-brands fa-facebook-f"
+      li.innerText = ""
+    } else if (li.innerText === "Twitter"){
+      li.className = "fa-brands fa-twitter"
+      li.innerText = ""
+    } else if (li.innerText === "instagram"){
+      li.className = "fa-brands fa-instagram"
+      li.innerText = ""
+    }
+  })
+
+
+
   block.append(footer);
 }

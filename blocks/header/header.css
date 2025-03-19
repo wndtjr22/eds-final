@@ -1,4 +1,16 @@
 /* header and nav layout */
+header {
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    /*padding-top: 50px;*/
+}
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -137,16 +149,20 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 
 /* brand */
 header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size-l);
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    margin-right: 50px; /* 로고와 메뉴 사이 간격 조정 */
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+    margin-left: 2rem;
+    margin-top: .75rem;
+    max-width: 6rem;
+    margin-bottom: 7px;
+    height: auto;
 }
 
 /* sections */
@@ -224,9 +240,17 @@ header nav .nav-sections ul > li > ul > li {
     margin: 0;
   }
 
+    header nav .nav-sections .default-content-wrapper{
+        float: right;
+        padding-top: 15px;
+    }
+
   header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
-    position: relative;
+      color: var(--textColor, #202020);
+      font-size: var(--fontSizeSmall, 14px);
+      padding: 15px 17px;
+      text-decoration: none;
+      text-transform: uppercase;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -264,5 +288,34 @@ header nav .nav-sections ul > li > ul > li {
 
 /* tools */
 header nav .nav-tools {
-  grid-area: tools;
+    grid-area: tools;
+    padding-top: 10px;
+}
+
+header nav .nav-tools .default-content-wrapper {
+    position: relative;
+    height: 2rem;
+}
+
+header nav .nav-tools .default-content-wrapper .icon.icon-search {
+    top: .8rem;
+    height: 1rem;
+    left: .5rem;
+    position: absolute;
+    width: 1rem;
+}
+
+/* tools */
+header nav .nav-tools input {
+    background-color: #ebebeb8a;
+    border: none;
+    border-radius: 0;
+    color: var(--textColor, #202020);
+    font-size: var(--fontSizeXSmall, 9pt);
+    height: 40px;
+    width: calc(100% - 4rem);
+    /*height: 100%;*/
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /*width: 100%;*/
 }
