@@ -179,11 +179,11 @@ export default async function decorate(block) {
   block.append(navWrapper);
 
 
-  const externalCssUrl = 'https://kit.fontawesome.com/6b9d4abe2e.js';
+  const externalCssUrl = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css';
 
   // 동적으로 <link> 태그 생성 및 삽입
-  const linkElement = document.createElement('script');
-  linkElement.crossOrigin = 'anonymous';
-  linkElement.src = externalCssUrl;
+  const linkElement = document.createElement('link');
+  linkElement.rel = 'stylesheet';
+  linkElement.href = externalCssUrl;
   document.head.appendChild(linkElement);
 }
