@@ -5,7 +5,7 @@ header {
     align-items: center;
     padding: 20px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     background-color: #fff;
     width: 100%;
     box-sizing: border-box;
@@ -15,7 +15,7 @@ header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 header nav {
@@ -318,4 +318,9 @@ header nav .nav-tools input {
     padding-left: 2rem;
     padding-right: 2rem;
     /*width: 100%;*/
+}
+
+body {
+    margin: 0 auto;
+    max-width: 105pc;
 }
