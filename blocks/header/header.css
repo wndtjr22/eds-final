@@ -66,6 +66,12 @@ header nav a:any-link {
   color: currentcolor;
 }
 
+/*header nav a:hover {*/
+/*    background-color: var(--brandPrimary, #ffea00);*/
+/*    padding: 20px;*/
+/*    border-radius: 4px;*/
+/*}*/
+
 /* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
@@ -324,3 +330,4 @@ body {
     margin: 0 auto;
     max-width: 105pc;
 }
+
