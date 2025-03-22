@@ -19,7 +19,6 @@ export default async function decorate(block) {
   const snsLogos = footer.querySelectorAll(".footer-sns-logo ul li");
 
   snsLogos.forEach((li) => {
-    console.log(li)
     if (li.innerText === "Facebook"){
       li.className = "fa-brands fa-facebook-f"
       li.innerText = ""

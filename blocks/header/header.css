@@ -331,3 +331,15 @@ body {
     max-width: 105pc;
 }
 
+.top-header {
+    background-color: #202020;
+    color: #f7f7f7;
+    font-size: var(--fontSizeSmall, 10px);
+    min-height: var(--utilityNavHeight, 30px);
+}
+
+.top-header a {
+    padding: 7px;
+    color: white;
+    float: right;
+}

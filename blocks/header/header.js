@@ -186,4 +186,11 @@ export default async function decorate(block) {
   linkElement.rel = 'stylesheet';
   linkElement.href = externalCssUrl;
   document.head.appendChild(linkElement);
+
+  // custom header
+  const topHeader = document.createElement('div');
+  topHeader.className = "top-header";
+  topHeader.innerHTML = "<a class='signup' href='/sign-up'>Sign Up</a>"
+  const header = document.querySelector('header');
+  header.prepend(topHeader);
 }
