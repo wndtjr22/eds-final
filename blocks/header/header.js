@@ -193,4 +193,16 @@ export default async function decorate(block) {
   topHeader.innerHTML = "<a class='signup' href='/sign-up'>Sign Up</a>"
   const header = document.querySelector('header');
   header.prepend(topHeader);
+
+
+  // search function redirect
+  const searchInput = document.querySelector('input.cmp-search__input');
+  console.log("search", searchInput);
+  // console.log("document.event.target.value", document.event.target.value);
+  searchInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+      console.log(document.event, event);
+      window.location.replace("/search?q="+event.target.value);
+    }
+  });
 }

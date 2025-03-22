@@ -1,21 +1,17 @@
 /* header and nav layout */
 header {
-    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    padding-top: 50px;
     padding-bottom: 100px;
     background-color: #fff;
     width: 100%;
     box-sizing: border-box;
-    /*padding-top: 50px;*/
 }
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
-  /*position: fixed;*/
 }
 
 header nav {
@@ -62,15 +58,15 @@ header nav p {
   line-height: 1;
 }
 
+.top-header a {
+    padding: 7px;
+    color: white;
+    float: right;
+}
+
 header nav a:any-link {
   color: currentcolor;
 }
-
-/*header nav a:hover {*/
-/*    background-color: var(--brandPrimary, #ffea00);*/
-/*    padding: 20px;*/
-/*    border-radius: 4px;*/
-/*}*/
 
 /* hamburger */
 header nav .nav-hamburger {
@@ -160,7 +156,7 @@ header .nav-brand {
     font-weight: 700;
     color: #000;
     text-decoration: none;
-    margin-right: 50px; /* 로고와 메뉴 사이 간격 조정 */
+    margin-right: 50px;
 }
 
 header nav .nav-brand img {
@@ -249,11 +245,12 @@ header nav .nav-sections ul > li > ul > li {
     header nav .nav-sections .default-content-wrapper{
         float: right;
         padding-top: 15px;
+        display: flex;
     }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
-      color: var(--textColor, #202020);
-      font-size: var(--fontSizeSmall, 14px);
+      color: #202020;
+      font-size: 14px;
       padding: 15px 17px;
       text-decoration: none;
       text-transform: uppercase;
@@ -316,14 +313,12 @@ header nav .nav-tools input {
     background-color: #ebebeb8a;
     border: none;
     border-radius: 0;
-    color: var(--textColor, #202020);
-    font-size: var(--fontSizeXSmall, 9pt);
+    color: #202020;
+    font-size: 9pt;
     height: 40px;
     width: calc(100% - 4rem);
-    /*height: 100%;*/
     padding-left: 2rem;
     padding-right: 2rem;
-    /*width: 100%;*/
 }
 
 body {
@@ -334,12 +329,6 @@ body {
 .top-header {
     background-color: #202020;
     color: #f7f7f7;
-    font-size: var(--fontSizeSmall, 10px);
-    min-height: var(--utilityNavHeight, 30px);
-}
-
-.top-header a {
-    padding: 7px;
-    color: white;
-    float: right;
+    font-size: 10px;
+    min-height: 30px;
 }
